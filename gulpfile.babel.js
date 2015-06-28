@@ -1,69 +1,51 @@
-'use strict';
+import through from 'through2';
+import gulp from 'gulp';
+import watch from 'gulp-watch';
+import rename from 'gulp-rename';
+import data from 'gulp-data';
+import jade from 'gulp-jade';
+import debug from 'gulp-debug';
+import replace from 'gulp-replace';
+import { log } from 'gulp-util';
+import buildbranch from 'buildbranch';
+import rss from 'rss';
+import del from 'del';
+import fs from 'fs-extra';
+import { outputFile as output } from 'fs-extra';
+import express from 'express';
+import assign from 'object-assign';
+import sequence from 'run-sequence';
+import each from 'each-done';
+import path from 'path';
+import numd from 'numd';
+import moment from 'moment';
+import { stats as finalStats } from './final-stats.json';
+import { site } from './package.json';
+import extract from 'article-data';
 
-var through = require('through2');
-var gulp = require('gulp');
-var watch = require('gulp-watch');
-var rename = require('gulp-rename');
-var data = require('gulp-data');
-var jade = require('gulp-jade');
-var debug = require('gulp-debug');
-var replace = require('gulp-replace');
-var log = require('gulp-util').log;
-var buildbranch = require('buildbranch');
-var rss = require('rss');
-var del = require('del');
-var fs = require('fs-extra');
-var output = require('fs-extra').outputFile;
-var express = require('express');
-var assign = require('object-assign');
-var sequence = require('run-sequence');
-var each = require('each-done');
-var path = require('path');
-var numd = require('numd');
+const d = input => moment(new Date(input)).format("DD MMMM YYYY");
+const unix = text => moment(new Date(text)).unix();
 
-var finalStats = fs.readJsonSync('./final-stats.json').stats;
-
-var moment = require('moment');
-var d = function(input) { return moment(new Date(input)).format("DD MMMM YYYY"); };
-var unix = function(text) { return moment(new Date(text)).unix(); }
-var site = require('./package.json').site;
-
-var getBasename = function(file) {
-  return path.basename(file.relative, path.extname(file.relative));
-};
-
-var articleData = require('./article-data');
+const env = process.env.NODE_ENV || 'dev';
+const getBasename = (file) => path.basename(file.relative, path.extname(file.relative));
 
 var articles = [];
 var articleHarvesting = function() {
   return through.obj(function(file, enc, cb) {
-    var article = articleData(file.contents.toString());
-    var url = getBasename(file);
-    var title = article.title;
-
-    if (getBasename(file) === 'README') {
-      url = 'about';
-      title = 'О проекте';
-    }
-
-    var author = fs.readJsonSync('./dump/' + title + '.json');
-
+    var article = extract(file.contents.toString());
     articles.push({
       site: site,
       filename: file.relative,
-      url: url + '/',
-      title: title,
+      url: getBasename(file) + '/',
+      title: article.titleHtml,
       image: article.image,
-      desc: article.descHtml,
+      descHtml: article.descHtml,
       descText: article.descText,
-      date: d(author.tweets[author.tweets.length - 1].created_at),
-      content: article.content,
-      rss: {
-        url: site.site_url + getBasename(file) + '/',
-        description: article.descRSS
-      }
+      date: article.date,
+      contentHtml: article.contentHtml,
+      rss: { url: site.site_url + getBasename(file) + '/' }
     });
-    articles.sort(function(a, b) { return unix(b.date) - unix(a.date); });
+    articles.sort(function(a, b) { return a.sortableDate - b.sortableDate; });
     cb(null, file);
   });
 };
@@ -77,8 +59,7 @@ gulp.task('articles-registry', function() {
 
 gulp.task('articles-registry-prod', function() {
   articles = [];
-  return gulp.src(['./posts/*.md', '!./posts/*draft*.md'])
-    .pipe(articleHarvesting());
+  return gulp.src('/posts/*.md').pipe(articleHarvesting());
 });
 
 gulp.task('index-page', function() {
@@ -130,7 +111,7 @@ gulp.task('stats-page', function() {
 
 gulp.task('about-page', function() {
   var readme = fs.readFileSync('./README.md', { encoding: 'utf8' });
-  var article = articleData(readme);
+  var article = extract(readme);
 
   return gulp.src('layouts/article.jade')
     .pipe(jade({
