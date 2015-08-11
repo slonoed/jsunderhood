@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html dir="LTR" lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>mraleph • jsunderhood</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://jsunderhood.ru/rss.xml" title="jsunderhood" rel="alternate" type="application/rss+xml">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <meta property="og:site_name" content="jsunderhood">
+    <meta property="article:author" content="https://jsunderhood.ru/about/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@jsunderhood">
+    <meta property="description" content="всем привет! меня зовут Вячеслав и эту неделю я вещаю из под капота JS - здесь темно и повсюду C++... отвечаю на вопросы про V8 и перформанс">
+    <meta name="og:url" content="https://jsunderhood.ru/mraleph/">
+    <meta name="og:title" content="Архив недели mraleph в jsunderhood">
+    <meta name="og:description" content="всем привет! меня зовут Вячеслав и эту неделю я вещаю из под капота JS - здесь темно и повсюду C++... отвечаю на вопросы про V8 и перформанс">
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <nav><a href="/stats/">Статистика</a> • <a href="/about/">О проекте</a> • <a href="/rss.xml">RSS</a> • <a href="https://github.com/iamstarkov/jsunderhood">GitHub</a> • <a href="https://google.com/?q=site:jsunderhood.ru+что-нибудь">Поиск</a>
+            </nav>
+            <div class="page-header">
+              <h1><a href="/">jsunderhood</a><small> / mraleph</small></h1>
+              <p class="hidden-xs">Коллективный твиттер-аккаунт для фронтенд-разработчиков с новым автором каждую неделю</p>
+            </div>
+          </div>
+        </div>
+        <div class="row hidden-xs">
+          <div class="col-md-12"><span class="text-danger">★ </span><a href="https://twitter.com/intent/tweet?url=http://jsunderhood.ru/mraleph/&amp;text=mraleph&amp;related=iamstarkov,shuvalov_anton">Твитнуть</a>, поделиться <a href="https://www.facebook.com/sharer.php?u=http://jsunderhood.ru/mraleph/&amp;t=mraleph">в Facebook</a> или <a href="http://vk.com/share.php?url=http://jsunderhood.ru/mraleph/&amp;title=mraleph">ВКонтакте</a><span class="text-danger"> ★</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <article><h1>mraleph</h1>
+<p><em>12 апреля 2015</em></p>
+<h2>Воскресенье <small>1 твит</small></h2>
+<p>всем привет! меня зовут Вячеслав и эту неделю я вещаю из под капота JS - здесь темно и повсюду C++... отвечаю на вопросы про V8 и перформанс</p>
+<h2>Понедельник <small>14 твитов</small></h2>
+<p>утро понедельника начинается с чтения LLVM Weekly - на прошлой неделе ничего интересного, впрочем, не случилось <a href="http://t.co/pwYE9sH0wx">llvmweekly.org/issue/66</a></p>
+<p>RT <a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> появились ли какие-то отпимизации в V8, связанные с defineProperty? Почему U*Array (UInt32) не содержит всех мет…</p>
+<p>. <a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> typedarrays исторически не были array, поэтому у них другой прототип; в ES6 все методы типа map будут  <a href="https://t.co/aHzphLndYT">people.mozilla.org/~jorendorff/es…</a></p>
+<p>. <a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> про defineProperty: зависит от того, что именно вас интересует: сам defineProperty или проперти им созданные?</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> если сам defineProperty то он как был медленный и печальный, так примерно пока и остается</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> с другой стороны если определять им non-writable свойство на прототипе какого-нибудь объекта то это используется в оптимизациях</p>
+<p>а вот демка скрытой проблемы с производительностью при использовании accessors <a href="http://t.co/csgOqPM7gA">mrale.ph/irhydra/2/#gis…</a> / <a href="https://t.co/Eh40zPeg8f">gist.github.com/mraleph/88ef8e…</a></p>
+<p>... смотреть надо что заинлайнилось во вкладке Source <a href="http://t.co/lZpppn1cY2">pic.twitter.com/lZpppn1cY2</a></p>
+<p>на работе сегодня выходной, тут в твиттере - тоже. чувствую себя героем фантастического рассказа &quot;Позвоните!&quot; <a href="http://t.co/FS75JrG7ne">fantlab.ru/work65898</a></p>
+<p>обнаружил у себя в рюкзаке распечатку статьи &quot;Common Compiler Optimisations are Invalid in the C11 Memory Model&quot; <a href="https://t.co/ZbinSfue8v">mpi-sws.org/~viktor/papers…</a></p>
+<p>казалось бы при чем тут JS? а вот при чем: <a href="https://t.co/IUSSwZcNwO">docs.google.com/document/d/1ND…</a></p>
+<p>RT <a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Вячеслав, немного не по теме, но всё же... Что вы думаете о реализациях виртуального дома в js? Есть ли з…</p>
+<p>.<a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a> на мой взгляд за ними есть настоящее,</p>
+<p>кто знает, что будет в будущем? может веб умрет, может DOM станет легковесным</p>
+<p>.<a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a> а тема у нас JS и все-все-все, так что любой вопрос по теме, даже если я на него ответа не знаю :)</p>
+<h2>Вторник <small>88 твитов</small></h2>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> тогда как JS стать лучше/быстрее? В чем слабые места современных движков?</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> я бы сказал, что самое слабое место современных движков это непредсказуемость производительности</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> классический пример был с Object.freeze: долгое время в V8 замороженные объекты неожиданно были значительно медленнее обычных</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> Object.freeze починили, но он хорошо подчеркивает суть - что в бенчмарках не встречается, то имеет случайную производительность</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> поэтому я считаю, что JS движки нынче должны развиваться в ширину, а не продолжать копать яму, стоя на одном месте</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> вот допустим forEach очень медленный по сравнению с обычным for-loop. почему медленный? &quot;потому что гладиолус&quot;.</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> можно немного подробнее про ширину?)</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> или пример с accessors который я вчера твитнул - можно сделать Clash случай таким же быстрым как NoClash.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> или Object.defineProperty / Object.prototype.hasOwnProperty они не очень-то быстрые, а можно сделать быстрыми</p>
+<p>в JS сообществе очень популярно изобретать велосипеды, вот и для меня это самый удобный способ добраться до работы <a href="http://t.co/UqqXgBfnKc">pic.twitter.com/UqqXgBfnKc</a></p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> реализация forEach внутри отличается от for-loop? Почему бы JIT не инлайнить forEach в for-loop.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> forEach реализован через for-loop <a href="https://t.co/cVodtJAkdb">github.com/v8/v8-git-mirr…</a></p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> проблема как раз в том, что никто пока не озаботился тем, чтобы forEach инлайнился и все лишнее оптимизировалось в никуда</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> я для этого как раз написал тулзу -&gt; <a href="http://t.co/pHZEWPybDb">mrale.ph/irhydra/2/</a>, там флаги и инструкции на первой странице</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Как можно посмотреть оптимизированный код в рантайме?</p>
+<p>RT <a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> есть будущее у компиляции LLVM-кода под браузеры, asm.js — как нового ассемблера и js на уровне железа? ht<a href="https://t.co/W7KlmcAEM8">destroyallsoftware.com/talks/the-birt…</a></p>
+<p>.<a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a> asm.js - весьма неполноценный. и мне кажется весьма странным решение &quot;прятать&quot; байткод внутри JSкода</p>
+<p>.<a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a> все мое отношение к нему было выражено 2 года назад <a href="http://t.co/Qq1paUkVvf">mrale.ph/blog/2013/03/2…</a> и почти не изменилось с тех пор.</p>
+<p>.<a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a> однако веб достаточно странная штука. тут часто побеждает популизм и политика, а не нормальные технические решения.</p>
+<p>RT <a href="https://twitter.com/dosyara" title="Sergey Maksimov">@dosyara</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> интересно, какие термины используют англоязычные разработчики для велосипеда, костыля и всякой упячки?</p>
+<p>.<a href="https://twitter.com/dosyara" title="Sergey Maksimov">@dosyara</a> костыль можно так и переводить &quot;crutch&quot;. &quot;изобретать велосипед&quot; ~ &quot;reinvent the wheel&quot;, все универсальное :)</p>
+<p>.<a href="https://twitter.com/dosyara" title="Sergey Maksimov">@dosyara</a> еще близкий аналог русского &quot;костыля&quot;, это &quot;kludge&quot; (a workaround or quick-and-dirty solution that is clumsy, inelegant)</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> В FF Nightly реализованы типизированные объекты <a href="http://t.co/l0Gtje43ik">wiki.ecmascript.org/doku.php?id=ha…</a> Нужна ли в JS статическая типизация?</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> типизированные объекты не привносят статической типизации в язык, поэтому вопрос не совсем понятен</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> еще не совсем понятен смысл слова &quot;нужна&quot;, кому нужна? у мощных статических систем типов есть свои преимущества.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> но если я сейчас начну о них рассуждать, то я неизбежно скачусь в рассуждения о вкусе и личных предпочтениях.</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Добавление typed objects и других типизированных структур как-то повлияет на ежедневную разработку?..</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> повлияет, если ваша ежедневная разработка требует оптимизаций на уровне object layout &amp; memory locality :)</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> в остальных случаях JS VMных собственных оптимизаций, которые случаются сами по себе, должно хватать.</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> То есть веб-разработчику не стоит заморачиваться о таких вещах, а лучше исправлять свой обычный JS код? :)</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> прежде всего нужно писать нормальный код (не пренебрегая простейшими знаниями об алгоритмах) и continuous performance tracking</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> ... а не так что фигачить код скажем год, а потом спохватиться и начать бегать вокруг него пытаясь оптимизировать</p>
+<p>RT <a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> есть ли в Dart AOT компиляция при компиляции в JS? Почему?</p>
+<p>. <a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> Dart в JS компиляция по определению AOT, потому что она проиходит один раз во время сборки проекта.</p>
+<p>. <a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> если эту компиляцию делать не AOT, а &quot;JIT&quot; на стороне клиента то получается нужно весь Dart код посылать с зависимостями</p>
+<p>. <a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> выглядит не очень эффективно.</p>
+<p>.<a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> хотя этот подход было бы интересно попробовать и написать такой JIT, у думаю пиковую производительньсть было бы проще достичь</p>
+<p>.<a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> но и прогревать его пришлось бы паяльной лампой. хороший пример - это pypy.js <a href="http://t.co/XxZ2zfmnh5">arewepythonyet.com</a></p>
+<p>.<a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> [впрочем у pypy.js большой overhead как раз из-за того, что они используют pypy скомпилированный emscripten]</p>
+<p>. <a href="https://twitter.com/kanterov" title="Gleb Kanterov">@kanterov</a> [руками бы писать было дольше и сложнее, но и overhead был бы меньше]</p>
+<p>RT <a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Rust или Go? Что тебе больше нравится и что станет мейнстримом (и станет ли)?</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> о обоих языков есть прикольные фичи и недостатки, например, у Go бедная система типов - а у Rust сильно уж замороченная.</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> я вообще к языкам программирования (за исключением русского языка) отношусь без особого фанатизма. молоток он нужен чтобы стучать</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> поэтому если стоит выбор в вакууме между Rust и Go, то я предпочту съесть еще мягких французских булок и выпить чаю</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> в будущем число языков программирования только продолжит расти поэтому понятие mainstream станет размываться</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> я думаю вместо mainstream нужно рассуждать о &quot;самоподдерживаемости&quot;</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> достаточен ли размер языкового community для обеспечения всех потребностей оного в велосипедах и прочих фреймворках</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> есть ли кому подхватить флаг, если разработчики компилятора попадут под автобус дружно?</p>
+<p>.<a href="https://twitter.com/raxpost" title="Роман Роман">@raxpost</a> мне кажется и Go, и Rust хоть и имеют большие растущие community, все еще уязвимы перед оным автобусом-языконенавистником.</p>
+<p>RT <a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> что по поводу оптимизаций в V8 для apply, bind или call. Раньше видел что call быстрее, потом apply, а потом bin…</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> зависит от ситуации. но bind действительно самый медленный из всех, потому что его никто не разгоняет :(</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> для foo.call() были не так давно реализованы оптимизации в Crankshaft, поэтому в теории он сейчас должен быть самым быстрым</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> паттерн foo.apply(x, arguments) внутри оптимизируемых функций тоже быстрый.</p>
+<p>.<a href="https://twitter.com/GrantedN" title="Alex Grand">@GrantedN</a> в неоптимизированном случае call быстрее за счет того, что нет нужды выделять временный массив аргументов</p>
+<p>еще случайный факт об о мне: в моем &quot;музыка для программирования&quot; плейлисте <a href="https://t.co/HC4sJzK4Hx">youtube.com/watch?v=_2xa46…</a> соседствует с <a href="https://t.co/o2j7IAUDAM">youtube.com/watch?v=foGkU6…</a></p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> а что с иммутабельными данными в движках? Они используют преимущества неизменяемости для оптимизаций?</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> V8 не особо использует, могла бы и лучше. я уже приводил, пример с non-writable свойством на прототипе  <a href="https://t.co/zjVhLXC6mu">twitter.com/jsunderhood/st…</a></p>
+<p>. <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> с другой стороны если написать вот такой цикл <a href="https://t.co/VW3wBz4rdm">gist.github.com/mraleph/141f0e…</a>, то там o.x не будет вынесено за цикл, хотя могло бы.</p>
+<p>. <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> одновременно в этом примере hidden class check будет убран - т.е. вроде как V8 понимает что объект immutable но вроде как и нет</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> числа, строки, булевы значения, замороженные объекты - больше ничего вроде нет иммутабельного</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> если объект &quot;ускользает&quot; из области компиляции, то компилятор обычно сдается и предполагает любые побочные эффекты</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> с другой стороны компиляторы пытаются отслеживать все это делать, escape analysis и т.д. т.е. это возможно в опр. пределах</p>
+<p>RT <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> как объект может оттуда ускользнуть? Ведь весь код всёравно проходит через компилятор?</p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> код обычно проходит через компилятор не весь сразу (это было бы слишком долго) а &quot;кусками&quot; <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> плюс в современных JS VM несколько компиляторов - все начинается с тупого, который почти ничего не оптимизирует <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> а оптимизирующий компилятор приходит позже и оптимизирует только то &quot;горячие&quot; фрагменты  <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> в современных JS VM эти фрагменты = функции, т.е. оптимизирующий компилятор оптимизирует ф-ии отдельно друг от друга  <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> например в <a href="https://t.co/VW3wByMPOM">gist.github.com/mraleph/141f0e…</a> он придет оптимизировать foo и не сможет заинлайнить вызов bar   <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> поэтому вызов bar будет для него непрозрачен <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> поэтому если мы бы в bar передаваем что-то, то непонятно что bar  там с ним делает. <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>RT <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> компиляторы не движутся в сторону оптимизации на более высоких уровнях? Вообще куда сейчас движутся компиляторы? к…</p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> да это как-то давно изученная тема intraprocedural vs interprocedural analysis и interprocedural - медленно и память кушает</p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> поэтому надо взвешивать стоимость и какой выхлоп получается. поэтому пока в JS мире intraprocedural + inlining работает ОК</p>
+<p>. <a href="https://twitter.com/ALF_er" title="Illia Segeda">@ALF_er</a> тот же asm.js и Strong Mode <a href="https://t.co/pFTvLGmy0R">developers.google.com/v8/experiments</a> у них ноги растут от нежелания делать interprocedural analysis</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> вот здесь <a href="https://t.co/PRrbihqVVA">github.com/babel/babel/is…</a> для оптимизации предлагают выносить try-catch в отдельную функцию, это правда…</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> Crankshaft не поддерживает try-catch по историческим причинам, поэтому горячим функциям это помогает быть оптимизированными.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> но у них должно быть нетривиальное тело (циклы там всякие), что бы прирост производительности был хорошо заметен</p>
+<p>адаптивная оптимизация одной картинкой <a href="http://t.co/t3KiTwWaNO">pic.twitter.com/t3KiTwWaNO</a></p>
+<p>RT <a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> а я опять о насущном :)
+Вячеслав, что вы думаете о реактивном подходе в построении сложных spa приложений…</p>
+<p>.<a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a> я думаю, что это функциональненько, и больше ничего :)</p>
+<p>.<a href="https://twitter.com/milk_is_my_life" title="Sebastyan Pereiro">@milk_is_my_life</a> я UI практически не делаю =&gt; нет опыта для сравнения. а когда делаю, то тяп-ляп на коленке (e.g. <a href="http://t.co/YdcYuNI7TC">mrale.ph/saga/</a> )</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Если бы это была основная архитектура, какими были бы современные ЯП? Или это не влияет?</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> насколько я знаю многие экспериментальные clockless CPU имели достаточно классические системы комманд</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> Charles Moore вон выпускает сейчас clockless CPU который по сути дела реализует Forth. ничего необычного :)</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> с другой стороны я стал сейчас искать последние новости --- оказывается IBM сделала <a href="http://t.co/P3Rw2ccJN2">en.wikipedia.org/wiki/TrueNorth</a></p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> я сомневаюсь что этот TrueNorth &quot;a neuromorphic CMOS chip&quot; программируется на каком-нибудь С++ или JS</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> нашел я, как они его программируют <a href="http://t.co/Df8vH3tOQn">dl1.frz.ir/FREE/papers-we…</a> вообщем это из другой реальности все.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> лучше уж посмотреть на Chuck Moore с его 144 core Forth CPU <a href="http://t.co/aZsC7BpmVL">infoq.com/presentations/…</a> это как-то ближе и понятнее</p>
+<h2>Среда <small>41 твит</small></h2>
+<p>начнем утро головоломкой из разряда &quot;и на старуху бывает проруха&quot; <a href="http://t.co/Ca3uOLbNL9">jsperf.com/es6-map-vs-obj…</a></p>
+<p>... напихали в объект кучу свойств obj[keys[i]] = i и почему-то читать эти свойства быстрее c ключами из Object.keys(obj), а не из keys</p>
+<p>RT <a href="https://twitter.com/vecmezoni" title="Alexander Inozemtsev">@vecmezoni</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> пользуешься ли ты IDE для C++? Xcode?</p>
+<p>.<a href="https://twitter.com/vecmezoni" title="Alexander Inozemtsev">@vecmezoni</a> нет, я пишу код в Sublime Text - основная рабочая машина у меня на Linux.</p>
+<p>никто что-то не спешит отгадывать мою головоломку, а я меж тем пью кофе из своей любимой JS-кружки <a href="http://t.co/mA61kNUbSs">pic.twitter.com/mA61kNUbSs</a></p>
+<p>RT <a href="https://twitter.com/23ydobemos" title="Ilya Zayats">@23ydobemos</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> о, расскажи про kinesis, как тебе?</p>
+<p>.<a href="https://twitter.com/23ydobemos" title="Ilya Zayats">@23ydobemos</a> спас меня от боли в запястьях - пять лет использую, только радость :)</p>
+<p>отгадка на загадку: дело в том, что obj[key] быстрее всего работает когда key - это интернализованная строка.</p>
+<p>... массив keys содержит строки результаты конкатенации, которые в V8 не интернализованы, а objectKeys содержит интернализованные строки.</p>
+<p>... потому что имена свойств внутри объекта V8 хранит в интернализованных виде -&gt; Object.keys(obj) возвращает массив интернализованных строк</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Что такое интернализованные строки? Без этого не понятно, откуда берется оптимизация.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> если A и B две интернализованные строки, то A === B только в том случае если A и B это один и тот же объект.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> иными словами интернализация строки - это поиск посимвольно равной ей строки в некотором глобальной таблице.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> подробнее: <a href="http://t.co/GQgeiFgqnK">en.wikipedia.org/wiki/String_in…</a></p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> некоторые реализации некотрых языков, наприер, Lua интернализуют все строки</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> V8 интернализует только некоторые, поэтому возможно ситуация что две посимвольно равные строки представлены разными объектами</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> здесь под &quot;объектом&quot; понимается объект уровня реализации, а не языка. из JavaScript это заметить нельзя</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Выходит, что V8 тогда не сравнивает посимвольно, а по внутреннему объекту, которому принадлежит строка?</p>
+<p>. <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> разумеется где-то далеко внутри операции obj[key] V8 сравнивает строки посимвольно (иначе это была бы неправильная реализация)</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> но в начале, на fast path, она пробует найти ключ в словаре простым сравнением указателей.</p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> и вот как раз случай obj[objectKeys[i]] всегда попадает на этот fast path и никогда не идет в slowPath.</p>
+<p>в сорцах chromium есть прикольные тулзы: вот, например, одна раскладывает бинарник на части и рисует с помощью d3 <a href="http://t.co/LK50ttKymi">pic.twitter.com/LK50ttKymi</a></p>
+<p>... можно кликая найти из какого файла пришла куча кода в бинарник, сама тулза здесь -&gt; <a href="https://t.co/tv1F2GsHhD">chromium.googlesource.com/chromium/src/+…</a></p>
+<p>RT <a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> Получается V8 копирует строки? Крайне не экономное расходование памяти.можно же владеть указате…</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> зависит от того, что вы вкладываете в понятие &quot;копирует&quot; и при каких условиях. допустим вы сложили две строки A + B</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> если бы V8 всегда интернила результат конкатенации ей надо было бы ее выполнить и пойти искать равную строку в таблице</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> вместо этого V8 на самом деле производит аналог rope - Const String фактически пару указателей (A, B) и не копирует ничего</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> таким образом экономится и память и время на копирование и интернинг.</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> конечно возможно такая ситуация, что вы производите много копий одной и той же строки &quot;aaaa&quot; + &quot;bbbb&quot; и храните их все</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> в этом случае интернинг бы существенно сэкономил память. но не ясно насколько это частный случай? скорее всего не очень.</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> поэтому ухудшать общий случай операции со строками - ради оптимизации частного не стоит.</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> программист может попрофилировать потребление памяти и сделать руками interning</p>
+<p>.<a href="https://twitter.com/reklatsmasters" title="Дмитрий Цветцих">@reklatsmasters</a> вот какая-то такая логика стоит за не интернингом всех подряд строк. строковые литералы &quot;a&quot; и ключи всегда интернятся.</p>
+<p>про строки (я от этих картинок даже прослезился, вспомнив как конспекты одногрупниц ксерил) <a href="http://t.co/bDzh96Kvkx">pic.twitter.com/bDzh96Kvkx</a></p>
+<p>RT <a href="https://twitter.com/oelifantiev" title="Oleg Elifantiev">@oelifantiev</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> flatten-строка быстрее? Может какие-то конкретные операции? Стоит игра свеч? <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a></p>
+<p>.<a href="https://twitter.com/oelifantiev" title="Oleg Elifantiev">@oelifantiev</a> из flatten строки очевидно быстрее брать по индексу. этим чаще всего заморачиваться <em>не</em> надо - V8 сама их плющит</p>
+<p>RT <a href="https://twitter.com/oelifantiev" title="Oleg Elifantiev">@oelifantiev</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> после какого объема ключей деградирует производительность объекта?</p>
+<p>.<a href="https://twitter.com/oelifantiev" title="Oleg Elifantiev">@oelifantiev</a> на этот вопрос простого ответа нет - зависит от того как объект создан и что понимается под &quot;производительностью объекта&quot;</p>
+<p>.<a href="https://twitter.com/oelifantiev" title="Oleg Elifantiev">@oelifantiev</a> эвристики для перехода в словарное представление периодиечески меняются, поэтому конкретными цифрами заморачиваться нет смысла</p>
+<p>RT <a href="https://twitter.com/dmitryshimkin" title="Dmitry Shimkin">@dmitryshimkin</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> насколько возможно и целесообразно заранее &quot;прогревать&quot; JIT для некого кода, который вероятно скоро будет в…</p>
+<p>.<a href="https://twitter.com/dmitryshimkin" title="Dmitry Shimkin">@dmitryshimkin</a> прогревать можно, но для больших приложений сложно - и если у вас этот код горячий он и сам постепенно прогреется.</p>
+<h2>Четверг <small>3 твита</small></h2>
+<p>сегодня был самый безвопросый день - все JS программисты видимо готовятся к выходным</p>
+<p>RT <a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> Правду пишут? <a href="https://t.co/XPSvqp14uE">twitter.com/roman01la/stat…</a></p>
+<p>.<a href="https://twitter.com/roman01la" title="λ [Roman Liutikov]">@roman01la</a> да</p>
+<h2>Пятница <small>9 твитов</small></h2>
+<p>внезапно натолкнулся на вопрос про таинственное замедление JS кода в Chrome <a href="http://t.co/Jmmgjn5dWZ">stackoverflow.com/questions/2942…</a></p>
+<p>... глянул на это дело в IRHydra по быстрому: оказывается это связано с тем, что сломалась одна оптимизация, которую я делал 3 года назад</p>
+<p>... карма. вот так сделаешь оптимизацию, уйдешь в другой проект - а оптимизация все живет и живет своей жизнью и периодически ломается</p>
+<p>... отгадка - что сломалось и как чинить, будет через час :)</p>
+<p>добрался до написания ответа на утренний вопрос <a href="http://t.co/i2i5ofCsKH">stackoverflow.com/questions/2942…</a> и фикса этого бага <a href="https://t.co/vu1nCV2yin">codereview.chromium.org/1077113002/</a></p>
+<p>чем короче фикс, тем сложнее объяснить почему что-то в оптимизаторе не работает без него</p>
+<p>выходные надвигаются, пора закоммитить что-нибудь и убежать.</p>
+<p>не знаю как вас, а меня расстраивает, что я не могу написать [1,2,3,4].reduce(Math.max) в JS</p>
+<p>ну т.е. я, конечно, могу написать, но толку с этого особо не будет.</p>
+<h2>Воскресенье <small>27 твитов</small></h2>
+<p>окей сегодня последний день моего задумчивого молчания в этом твиттере</p>
+<p>я мог бы набросить под конец, признавшись, что я не особо-то люблю JavaScript, ну да всем это и так известно :)</p>
+<p>тут как-то купил пельмени в магазине; вот покупные пельмени - это как готовый язык программирования, а самодельные - это когда сам написал</p>
+<p>... хочу самодельных пельменей и свой язык программирования - но времени нет</p>
+<p>RT <a href="https://twitter.com/aod_toxic" title="Leon Yeromin">@aod_toxic</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> не встречал людей в зравом рассудке, которые его любят. Он объективно очень плох.</p>
+<p>продолжая тему пельменей - у покупных пельменей внутри сплошной NaM (Not-a-Meat), он получается если сложить говядину с undefined.</p>
+<p>стоит ли сделать digest из всех технических вопросов, на которые я ответил? (исключая секретные рецепты моей любимой еды)</p>
+<p><a href="http://t.co/VMNURsiyrq">stefan-marr.de/papers/pldi-ma…</a> &lt;- скоро все смогут писать быстрые виртуальные машины на коленке, поэтому надо рубить бабло пока эта тема горячая</p>
+<p>я думаю если устану писать код, напишу книгу &quot;Еда и Программирование&quot;</p>
+<p>вот допустим гречка, столь любимая на просторах нашей необъятной родины, это очевидная метафора на Pascal.</p>
+<p>на тебя одинаково странно смотрят, когда ты говоришь &quot;я ем гречку&quot; и &quot;я пишу на Паскале&quot;</p>
+<p>RT <a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> а что насчёт C++ и Go?</p>
+<p>.<a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a> C++ - это Доширак, ты его заварил - все вокруг умерли, а ты один счастливый сидишь и кушаешь обжигаясь</p>
+<p>.<a href="https://twitter.com/shuvalov_anton" title="Darth Shuvalov">@shuvalov_anton</a> а Go... овсянная каша? очень просто и полезно для желудка, если от С++ у тебя язва.</p>
+<p>окей, всех с прошедшей неделей, поднимаю бокал за вас, пишущих на JS без страха и сомнений <a href="http://t.co/wBI9t4bDxP">pic.twitter.com/wBI9t4bDxP</a></p>
+<p>вот краткое содержание недели <a href="http://t.co/mtCaGVM1Am">mrale.ph/blog/2015/04/1…</a>, ловите меня на <a href="http://t.co/8NGUcgwQ1w">mrale.ph</a> и в основном твиттере <a href="https://twitter.com/mraleph" title="Vyacheslav Egorov">@mraleph</a>. всем пока!</p>
+<p>и еще, смотрите на языки программирования за пределами JS: C++, Haskell, Rust, Go, C#, Lua, Dart, OCaml, Clojure, Agda, всёвсёвсё</p>
+<p>это не особо-то полезно в рамках тотальной тирании JS в вебе, но чего тираны всегда боятся? ЗНАНИЙ.</p>
+<p>знания расширяют угол обзора... кто видел Erlang, тот на колбэки смотрит косо, хоть Erlang в остальном и как-то пффффф</p>
+<p>а когда угол обзора расширяется - то это можно и к тому языку на котором пишешь применить. вот.</p>
+<p>RT <a href="https://twitter.com/beshkenadze" title="Александр Бешкенадзе">@beshkenadze</a>: <a href="https://twitter.com/jsunderhood" title="Разработчик">@jsunderhood</a> java, php, python, ruby :)</p>
+<p>.<a href="https://twitter.com/beshkenadze" title="Александр Бешкенадзе">@beshkenadze</a> да, на все надо смотреть. на PHP надо смотреть, чтобы понять как не надо делать :) <em>набросил и убежал</em></p>
+<p>на часах 11. хочу еще набросить - пока не пробило 12 и пароль не отобрали. многие думают, что в программировании главное - писать код.</p>
+<p>мне же кажется, что в программировании главное - это хорошо подумать и ничего не написать... ненаписанный код = несломанные тесты, ляпота!</p>
+<p>вот еще интересный вопрос: есть сериалы про агентов FBI, есть сериалы про врачей, а есть ли сериалы про программистов?</p>
+<p>последний сериал про программистов, который я видел выглядел как-то так (главный программист в центре \o/) <a href="http://t.co/DU16J3yTsH">pic.twitter.com/DU16J3yTsH</a></p>
+<p>всё, 12:07, мой пароль превратился в тыкву. вот вам стихотворение Фернандо Пессоа напоследок <a href="http://t.co/M5RlwAJLYW">pic.twitter.com/M5RlwAJLYW</a></p>
+</article>
+        </div>
+      </div>
+    </div><br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center"><span class="text-danger">★ </span><a href="https://twitter.com/intent/tweet?url=http://jsunderhood.ru/mraleph/&amp;text=mraleph&amp;related=iamstarkov,shuvalov_anton">Твитнуть</a>, поделиться <a href="https://www.facebook.com/sharer.php?u=http://jsunderhood.ru/mraleph/&amp;t=mraleph">в Facebook</a> или <a href="http://vk.com/share.php?url=http://jsunderhood.ru/mraleph/&amp;title=mraleph">ВКонтакте</a><span class="text-danger"> ★</span>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row footer text-center">
+        <div class="col-md-12">
+          <hr>
+          <p><a href="https://twitter.com/iamstarkov">@iamstarkov</a> c любовью разработал<br><a href="https://twitter.com/shuvalov_anton">@shuvalov_anton</a> бережно курирует авторов
+          </p>
+          <nav><a href="/stats/">Статистика</a> • <a href="/about/">О проекте</a> • <a href="/rss.xml">RSS</a> • <a href="https://github.com/iamstarkov/jsunderhood">GitHub</a> • <a href="https://google.com/?q=site:jsunderhood.ru+что-нибудь">Поиск</a>
+          </nav><br>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gauges = _gauges || [];
+      (function() {
+        var t   = document.createElement('script');
+        t.type  = 'text/javascript';
+        t.async = true;
+        t.id    = 'gauges-tracker';
+        t.setAttribute('data-site-id', '5561c0f6de2e265b4d001370');
+        t.setAttribute('data-track-path', 'https://track.gaug.es/track.gif');
+        t.src = 'https://track.gaug.es/track.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(t, s);
+      })();
+    </script>
+  </body>
+</html>
